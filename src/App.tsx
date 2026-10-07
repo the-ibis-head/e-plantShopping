@@ -1,21 +1,32 @@
-import { Button } from "@/components/ui/button"
+import { Route, Routes } from "react-router-dom";
 
-export function App() {
+import Navbar from "@/components/Navbar";
+
+import Landing from "@/pages/Landing";
+import AboutUs from "@/pages/AboutUs";
+import ProductList from "@/components/ProductList";
+import CartItem from "@/components/CartItem";
+
+export default function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div>
+      <Navbar />
+      <main className="bg-gray-50 py-12">
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/plants" element={<ProductList />} />
+          <Route path="/cart" element={<CartItem />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </main>
+      <footer>
+        <div className="mx-auto max-w-7xl p-4 text-center">
+          <p>
+            &copy; {new Date().getFullYear()} Paradise Nursery. All rights
+            reserved.
+          </p>
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
-
-export default App
