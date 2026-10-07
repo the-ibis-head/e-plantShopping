@@ -65,17 +65,3 @@ paradise-nursery/
 ├── tsconfig.app.json
 └── vite.config.ts
 ```
-
-```
-src/
-  main.tsx
-  App.jsx
-  App.css
-  data/plants.js
-  store/CartSlice.jsx
-  store/store.js
-  components/Navbar.jsx
-  components/ProductList.jsx
-  components/CartItem.jsx
-  components/AboutUs.jsx
-```
