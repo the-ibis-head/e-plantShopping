@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { buttonVariants } from "@/components/ui/button";
 import { Button } from "@/components/ui/button";
 
+import "@/App.css";
+
 export default function Landing() {
   return (
     <div>
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="landing mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="mb-6 text-5xl font-bold">
             Welcome to Paradise Nursery
